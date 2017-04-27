@@ -1,0 +1,115 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'C:\\Users\\corrado\\Documents\\Programming\\Projects\\json2css',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\corrado\AppData\Roaming\npm-cache\json2css\1.0.0\package.tgz not in flight; packing
+9 verbose correctMkdir C:\Users\corrado\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+10 info lifecycle json2css@1.0.0~prepublish: json2css@1.0.0
+11 silly lifecycle json2css@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ 'C:\\Users\\corrado\\AppData\\Roaming\\npm-cache\\json2css\\1.0.0\\package.tgz',
+12 verbose tar pack   'C:\\Users\\corrado\\Documents\\Programming\\Projects\\json2css' ]
+13 verbose tarball C:\Users\corrado\AppData\Roaming\npm-cache\json2css\1.0.0\package.tgz
+14 verbose folder C:\Users\corrado\Documents\Programming\Projects\json2css
+15 verbose addLocalTarball adding from inside cache C:\Users\corrado\AppData\Roaming\npm-cache\json2css\1.0.0\package.tgz
+16 verbose correctMkdir C:\Users\corrado\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+17 silly cache afterAdd json2css@1.0.0
+18 verbose afterAdd C:\Users\corrado\AppData\Roaming\npm-cache\json2css\1.0.0\package\package.json not in flight; writing
+19 verbose correctMkdir C:\Users\corrado\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+20 verbose afterAdd C:\Users\corrado\AppData\Roaming\npm-cache\json2css\1.0.0\package\package.json written
+21 silly publish { name: 'json2css',
+21 silly publish   version: '1.0.0',
+21 silly publish   description: 'A converter from json to css',
+21 silly publish   main: 'src/json2css.js',
+21 silly publish   author:
+21 silly publish    { name: 'Corrado Canepari',
+21 silly publish      email: 'caneparicorrado@outlook.it' },
+21 silly publish   license: 'MIT',
+21 silly publish   babel: { presets: [ 'es2015' ] },
+21 silly publish   scripts:
+21 silly publish    { start: 'webpack-dev-server --inline --hot',
+21 silly publish      build: 'webpack',
+21 silly publish      test: 'ava --watch' },
+21 silly publish   dependencies:
+21 silly publish    { ava: '^0.19.1',
+21 silly publish      'babel-core': '^6.24.1',
+21 silly publish      'babel-loader': '^7.0.0',
+21 silly publish      'babel-preset-es2015': '^6.24.1',
+21 silly publish      webpack: '^2.4.1',
+21 silly publish      'webpack-dev-server': '^2.4.5' },
+21 silly publish   readme: '# JSON2CSS\r\n\r\nThis little 2 minutes project was born out of all the difficoulty and complexite that derives from setting up webpack to imprt styles from other css files into javascript entry points.\r\n\r\nIt was also kinda my own reaction to React\'s JSON styling, which I find to be really nice, since it allows to style your elements without the need for "context-switching" from JavaScript to CSS or SASS.\r\n\r\nThis is how you use it: first of all, you have to require it:\r\n\r\n```javascript\r\nconst css = require(\'json2css\')\r\n```\r\n\r\nThen you can just convert a whole JSON object to a CSS style and append it to the element\'s head as a `style` tag:\r\n\r\n```javascript\r\nconst rules = {\r\n\t"button": {\r\n\t\t"padding": "10px",\r\n\t\t"border": "none",\r\n\t\t"background-color": "#eee",\r\n\t\t"transition": "all 1s ease-in-out",\r\n\t\t"font-size": "20px"\r\n\t},\r\n\t"button:hover": {\r\n\t\t"background-color": "white"\r\n\t},\r\n\t"button:focus": {\r\n\t\t"outline": "none"\r\n\t},\r\n\t"input": {\r\n\t\t"border": "none",\r\n\t\t"font-size": "20px",\r\n\t\t"min-height": "30px",\r\n\t\t"padding": "5px",\r\n\t\t"transition": "all 0.3s ease-in"\r\n\t},\r\n\t"input:focus": {\r\n\t\t"outline": "none",\r\n\t\t"border-bottom": "2px solid #eee"\r\n\t}\r\n}\r\n\r\nlet s = document.createElement(\'style\')\r\ns.setAttribute(\'type\', \'text/css\')\r\n\r\nlet head = document.getElementsByTagName(\'head\')[0]\r\n\r\ns.appendChild(document.createTextNode(css(rules)));\r\n\r\nhead.appendChild(s)\r\n```\r\n\r\nHave fun!',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   _id: 'json2css@1.0.0',
+21 silly publish   _shasum: '7db0d9a1444d6cec0f8298cc4f81ca6c7f5a467c',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name json2css
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'json2css',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'json2css',
+26 silly mapToRegistry   name: 'json2css',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/json2css
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading C:\Users\corrado\AppData\Roaming\npm-cache\json2css\1.0.0\package.tgz
+30 verbose request uri https://registry.npmjs.org/json2css
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 10:44:44 PM
+33 verbose request using bearer token for auth
+34 verbose request id d3215ce9ac8d162b
+35 http request PUT https://registry.npmjs.org/json2css
+36 http 403 https://registry.npmjs.org/json2css
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '102',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Thu, 27 Apr 2017 20:44:45 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-hhn1526-HHN',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1493325885.865589,VS0,VE916',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating C:\Users\corrado\AppData\Roaming\npm-cache\registry.npmjs.org\json2css on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: you do not have permission to publish "json2css". Are you logged in as the correct user? : json2css
+40 verbose stack     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+40 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+40 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:969:12)
+41 verbose statusCode 403
+42 verbose pkgid json2css
+43 verbose cwd C:\Users\corrado\Documents\Programming\Projects\json2css
+44 error Windows_NT 10.0.10586
+45 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+46 error node v6.10.2
+47 error npm  v3.10.10
+48 error code E403
+49 error you do not have permission to publish "json2css". Are you logged in as the correct user? : json2css
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
