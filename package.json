@@ -1,0 +1,26 @@
+{
+  "name": "jsontocss",
+  "version": "1.0.0",
+  "description": "A converter from json to css",
+  "main": "src/json2css.js",
+  "author": "Corrado Canepari <caneparicorrado@outlook.it>",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "scripts": {
+    "start": "webpack-dev-server --inline --hot",
+    "build": "webpack",
+    "test": "ava --watch"
+  },
+  "dependencies": {
+    "ava": "^0.19.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
