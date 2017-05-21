@@ -1,6 +1,6 @@
 {
   "name": "jsontocss",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A converter from json to css",
   "main": "src/json2css.js",
   "author": "Corrado Canepari <caneparicorrado@outlook.it>",
