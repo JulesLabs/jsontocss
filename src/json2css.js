@@ -1,31 +1,35 @@
-module.exports = function(json) {
-	let output = ""
-	let selectors = Object.keys(json)
-	selectors.forEach(selector => {
-		output += selector + '{'
-		let rules = Object.keys(json[selector])
-		rules.forEach(rule => {
-			output += `${rule}: ${json[selector][rule]};`
+module.exports = {
+	fromjson: function(json) {
+		let output = ""
+		let selectors = Object.keys(json)
+		selectors.forEach(selector => {
+			output += selector + '{'
+			let rules = Object.keys(json[selector])
+			rules.forEach(rule => {
+				output += `${rule}: ${json[selector][rule]};`
+			})
+			output += '}'
 		})
-		output += '}'
-	})
-	return output
-}
-
-/*
-{
-	".btn": {
-		"margin": "0px",
-		"padding": "10px"
+		return output
 	},
-	"p": {
-		"font-size": "20px"
+
+	apply: function(style) {
+		switch(typeof style) {
+			case 'Object':
+				let css = this.fromjson(style)
+				let s = document.createElement('style')
+				s.setAttribute('type', 'text/css')
+				let head = (document.getElementsByTagName('head')[0]) || document.createElement('head')
+				s.appendChild(document.createTextNode(css(rules)))
+				head.appendChild(s)
+				break
+			case 'String':
+				let s = document.createElement('style')
+				s.setAttribute('type', 'text/css')
+				let head = (document.getElementsByTagName('head')[0]) || document.createElement('head')
+				s.appendChild(document.createTextNode(css(rules)));
+				head.appendChild(s)
+				break
+		}
 	}
 }
-*/
-
-/*
-selectors = ["btn", "p"]
-rules = [{"margin": "0px", "padding": "10px"}]
-rule = {"margin": "0px"}
-*/
